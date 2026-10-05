@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sushi Bites | Fresh Rolls, Big Flavour</title>
+  <meta name="description" content="Order delicious sushi rolls with quantity discounts.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="nav">
+    <a class="brand" href="#home">
+      <span class="brand-mark">🍣</span>
+      <span>SUSHI<span class="accent">BITES</span></span>
+    </a>
+    <nav>
+      <a href="#menu">Menu</a>
+      <a href="#how">How it works</a>
+      <a href="#order" class="nav-order">Order now</a>
+    </nav>
+  </header>
+
+  <main>
+    <section id="home" class="hero">
+      <div class="hero-content">
+        <p class="eyebrow">FRESH • CREAMY • SAVOURY</p>
+        <h1>Big flavour.<br><em>One perfect bite.</em></h1>
+        <p class="hero-text">Pick your favourite rolls, mix your flavours and get the best price automatically.</p>
+        <div class="hero-buttons">
+          <a href="#menu" class="btn btn-dark">Explore menu <span>↓</span></a>
+          <a href="#order" class="btn btn-light">Start an order</a>
+        </div>
+        <div class="price-note">
+          <span>RM1.70</span> each · <b>5+</b> RM1.60 · <b>10+</b> RM1.50
+        </div>
+      </div>
+      <div class="hero-art">
+        <div class="plate">
+          <div class="sushi sushi-a">🍣</div>
+          <div class="sushi sushi-b">🍙</div>
+          <div class="sushi sushi-c">🍣</div>
+          <div class="sushi sushi-d">🍙</div>
+        </div>
+        <div class="stamp">FRESH<br><small>DAILY</small></div>
+      </div>
+    </section>
+
+    <section id="menu" class="section menu-section">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">OUR MENU</p>
+          <h2>Choose your<br><em>favourite.</em></h2>
+        </div>
+        <p class="section-copy">12 flavours made for mixing and matching. Every roll is RM1.70 at the standard price.</p>
+      </div>
+      <div id="menuGrid" class="menu-grid"></div>
+    </section>
+
+    <section id="how" class="how-section">
+      <div class="section-heading center">
+        <p class="eyebrow">SIMPLE ORDERING</p>
+        <h2>Pick. Pack. <em>Enjoy.</em></h2>
+      </div>
+      <div class="steps">
+        <div class="step"><span>01</span><h3>Choose flavours</h3><p>Add any rolls you want to your order.</p></div>
+        <div class="step"><span>02</span><h3>Get your discount</h3><p>5+ pieces = RM1.60 each. 10+ = RM1.50 each.</p></div>
+        <div class="step"><span>03</span><h3>Send the order</h3><p>Fill in your details and send the order straight to us.</p></div>
+      </div>
+    </section>
+
+    <section id="order" class="order-section">
+      <div class="order-wrap">
+        <div class="order-info">
+          <p class="eyebrow">YOUR ORDER</p>
+          <h2>Ready to<br><em>roll?</em></h2>
+          <p>Add items from the menu and your order summary will appear here. Your total price updates automatically.</p>
+          <div class="discount-card">
+            <div><strong>1–4</strong><span>RM1.70 each</span></div>
+            <div><strong>5–9</strong><span>RM1.60 each</span></div>
+            <div><strong>10+</strong><span>RM1.50 each</span></div>
+          </div>
+        </div>
+
+        <div class="order-card">
+          <div id="cartEmpty" class="cart-empty">
+            <div class="empty-icon">🍣</div>
+            <h3>Your order is empty</h3>
+            <p>Choose something delicious from the menu above.</p>
+            <a href="#menu" class="text-link">Browse menu →</a>
+          </div>
+
+          <div id="cartContent" class="hidden">
+            <div id="cartItems"></div>
+            <div class="total-row"><span>Pieces</span><strong id="totalPieces">0</strong></div>
+            <div class="total-row"><span>Price per piece</span><strong id="unitPrice">RM1.70</strong></div>
+            <div class="grand-total"><span>Total</span><strong id="grandTotal">RM0.00</strong></div>
+
+            <form id="orderForm">
+              <h3>Customer details</h3>
+              <label>Name<input id="customerName" required placeholder="Your name"></label>
+              <label>Phone / WhatsApp<input id="customerPhone" required placeholder="01X-XXXXXXX"></label>
+              <label>Notes <span class="optional">(optional)</span><textarea id="customerNotes" placeholder="Pickup time, special request, etc."></textarea></label>
+              <button class="btn btn-dark submit-btn" type="submit">Send order via WhatsApp <span>→</span></button>
+              <p class="form-note">Your WhatsApp app will open with the completed order message.</p>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="brand"><span class="brand-mark">🍣</span><span>SUSHI<span class="accent">BITES</span></span></div>
+    <p>Fresh rolls. Good vibes. Great bites.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
